@@ -69,7 +69,7 @@ namespace Kurcash.Windows {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Kurcash;component/windows/panelchoosewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Kurcash;V1.0.0.0;component/windows/panelchoosewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Windows\PanelChooseWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
