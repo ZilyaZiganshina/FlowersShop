@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Fonts\eirik-raude.ttf" />
+    <None Remove="Resources\Images\2.png" />
+    <None Remove="Resources\Images\account.png" />
+    <None Remove="Resources\Images\add.png" />
+    <None Remove="Resources\Images\admin.png" />
+    <None Remove="Resources\Images\bucket.png" />
+    <None Remove="Resources\Images\catalog.png" />
+    <None Remove="Resources\Images\delete.png" />
+    <None Remove="Resources\Images\like.png" />
+    <None Remove="Resources\Images\liked.png" />
+    <None Remove="Resources\Images\logo.png" />
+    <None Remove="Resources\Images\no_image.png" />
+    <None Remove="Resources\Images\order.png" />
+    <None Remove="Resources\Images\refresh.png" />
+    <None Remove="Resources\Images\save.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\eirik-raude.ttf" />
+    <Resource Include="Resources\Images\2.png" />
+    <Resource Include="Resources\Images\account.png" />
+    <EmbeddedResource Include="Resources\Images\admin.png" />
+    <Resource Include="Resources\Images\bucket.png" />
+    <Resource Include="Resources\Images\catalog.png" />
+    <Resource Include="Resources\Images\logo.png" />
+    <Resource Include="Resources\Images\order.png" />
+    <Resource Include="Resources\Images\add.png" />
+    <Resource Include="Resources\Images\delete.png" />
+    <Resource Include="Resources\Images\like.png" />
+    <Resource Include="Resources\Images\liked.png" />
+    <Resource Include="Resources\Images\no_image.png" />
+    <Resource Include="Resources\Images\refresh.png" />
+    <Resource Include="Resources\Images\save.png" />
+  </ItemGroup>
+
+</Project>

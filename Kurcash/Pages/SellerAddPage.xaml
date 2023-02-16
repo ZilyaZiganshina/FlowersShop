@@ -1,0 +1,69 @@
+﻿<Page x:Class="Kurcash.Pages.SellerAddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kurcash.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SellerAddPage">
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <StackPanel 
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            
+            Grid.Row="0" Height="425" Grid.RowSpan="2" Width="210">
+                <TextBlock
+            Style="{StaticResource tbStandart}">Логин</TextBlock>
+                <TextBox
+                x:Name="logTB"
+                
+                Style="{StaticResource tbStand}"
+                ></TextBox>
+                <TextBlock
+            Style="{StaticResource tbStandart}">Пароль</TextBlock>
+                <TextBox
+                x:Name="passTB"
+                Style="{StaticResource tbStand}"
+                ></TextBox>
+                <TextBlock
+            Style="{StaticResource tbStandart}">Почта</TextBlock>
+                <TextBox
+                Style="{StaticResource tbStand}"
+                x:Name="emailTB"
+                >
+                </TextBox>
+                <TextBlock
+            Style="{StaticResource tbStandart}">Полное имя</TextBlock>
+                <TextBox
+                Style="{StaticResource tbStand}"
+                x:Name="fullnameTB"
+                >
+                </TextBox>
+                <Button
+                x:Name="submitBTN"
+                Click="submitBTN_Click"
+               Style="{StaticResource btnStyle}" Cursor="Hand"
+                >Добавить</Button>
+
+            </StackPanel>
+            <Grid Grid.Row="1">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="8*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,183 @@
+﻿<Page x:Class="Kurcash.Pages.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kurcash.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="549*"/>
+            <ColumnDefinition Width="251*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid
+            IsReadOnly="True"
+            FontFamily="/Fonts/#Montserrat"
+            x:Name="FlowersGrid"
+            SelectionChanged="FlowersGrid_SelectionChanged"
+            FontSize="15"
+            Background="Transparent"
+            ColumnWidth="*"
+            SelectionMode="Single"
+            >
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Фото">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image
+                               Source="{Binding Image}"
+                                x:Name="gridImg" 
+                                Height="50"
+                                Width="25"
+                                
+                                >
+
+                            </Image>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn
+                   Header="Номер" 
+                    Binding="{Binding Id}"
+                    ></DataGridTextColumn>
+                <DataGridTextColumn
+                   Header="Название" 
+                    Binding="{Binding Name}"
+                    ></DataGridTextColumn>
+                <DataGridTextColumn
+                   Header="Цвет" 
+                    Binding="{Binding ColorId}"
+                    ></DataGridTextColumn>
+                <DataGridTextColumn
+                   Header="Стоимость" 
+                    Binding="{Binding Price}"
+                    ></DataGridTextColumn>
+                <DataGridTextColumn
+                   Header="Тип" 
+                    Binding="{Binding TypeId}"
+                    ></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ScrollViewer
+            Grid.Column="2">
+            <StackPanel>
+                <Image
+                
+                PreviewMouseDown="goofIMG_PreviewMouseDown"
+                Height="80"
+                Width="100"
+                Cursor="Hand"
+                Stretch="Uniform"
+                x:Name="goofIMG"
+                AllowDrop="True"
+                Source="/Resources/Images/no_image.png">
+                </Image>
+
+                <TextBlock
+            Style="{StaticResource tbStandart}">Название</TextBlock>
+
+                <TextBox
+                x:Name="NameTB"
+                Style="{StaticResource tbStand}"
+                ></TextBox>
+
+                
+                <TextBlock
+            Style="{StaticResource tbStandart}">Стоимость</TextBlock>
+                <TextBox
+                x:Name="priceTB"
+                    PreviewTextInput="priceTB_PreviewTextInput"
+                Style="{StaticResource tbStand}" Cursor="IBeam"
+                ></TextBox>
+                <TextBlock
+            Style="{StaticResource tbStandart}">Тип</TextBlock>
+
+                <ComboBox
+                x:Name="typeTB"
+                Width="200"
+                Height="25"
+                Background="Transparent" 
+                BorderBrush="Black"   Cursor="IBeam"
+                Foreground="AliceBlue"
+                    
+                >
+                    <ComboBoxItem>Исскуственный</ComboBoxItem>
+                    <ComboBoxItem>Живой</ComboBoxItem>
+                </ComboBox>
+
+                <TextBlock
+            Style="{StaticResource tbStandart}" Margin="0 5 0 0">Цвет</TextBlock>
+                <ComboBox
+                x:Name="ColorTB"
+                Width="200"
+                    Height="25"
+                Background="Transparent" 
+                 BorderBrush="Black"   Cursor="IBeam"
+                    Foreground="AliceBlue">
+                    <ComboBoxItem>Красный</ComboBoxItem>
+                    <ComboBoxItem>Бежевый</ComboBoxItem>
+                    <ComboBoxItem>Белый</ComboBoxItem>
+                    <ComboBoxItem>Желтый</ComboBoxItem>
+                    <ComboBoxItem>Смешанный</ComboBoxItem>
+                    <ComboBoxItem>Розовый</ComboBoxItem>
+                    <ComboBoxItem>Рыжий</ComboBoxItem>
+                </ComboBox>
+
+                <WrapPanel
+                HorizontalAlignment="Center">
+                    <Button
+            
+            Grid.Column="2"
+                
+            
+                x:Name="addBTN"
+                Click="addBTN_Click"
+                    Height="45"
+               Style="{StaticResource btnStyle1}" Cursor="Hand"
+                >
+                        <Image Source="/Resources/Images/add.png"/>
+                    </Button>
+                    <Button
+            
+            Grid.Column="2"
+                
+            
+                x:Name="saveBTN"
+                Click="saveBTN_Click"
+               Style="{StaticResource btnStyle1}" Cursor="Hand"
+                >
+                        <Image Source="/Resources/Images/save.png"/>
+                    </Button>
+                    <Button
+            
+            Grid.Column="2"
+                
+            Height="40"
+                x:Name="deleteBTN"
+                Click="deleteBTN_Click"
+               Style="{StaticResource btnStyle1}" Cursor="Hand"
+                >
+
+                        <Image Source="/Resources/Images/delete.png"/>
+                    </Button>
+
+                </WrapPanel>
+                <Button
+            
+            Grid.Column="2"
+                
+            Height="40"
+                x:Name="refreshBTN"
+                Click="refreshBTN_Click"
+               Style="{StaticResource btnStyle1}" Cursor="Hand"
+                >
+                    <Image Source="/Resources/Images/refresh.png"/>
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Page>
