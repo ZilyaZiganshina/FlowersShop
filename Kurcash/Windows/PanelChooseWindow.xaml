@@ -9,7 +9,7 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Title="Выберите панель" Height="300" Width="400">
-    <Grid>
+    <Grid Background="#FFDBE8F4">
         <StackPanel
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
@@ -17,7 +17,7 @@
             >
             <TextBlock
                 FontSize="18"
-                >Выберите панель</TextBlock>
+                ></TextBlock>
             <WrapPanel
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
@@ -41,7 +41,7 @@
                 Click="flowersBTN_Click"
                Style="{StaticResource btnStyle1}" Cursor="Hand" Height="40" Width="150"
                 >
-                    Букеты
+                    Товары
                     <!--<Image Source="/Resources/Images/admin.png"/>-->
                 </Button>
             </WrapPanel>

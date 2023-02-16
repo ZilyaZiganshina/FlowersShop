@@ -30,14 +30,7 @@
                 x:Name="submitBTN"
                 Click="submitBTN_Click"
                Style="{StaticResource btnStyle}" Cursor="Hand"
-                >Войти</Button>
-            <TextBlock 
-                FontSize="13"
-                PreviewMouseDown="TextBlock_PreviewMouseDown"
-                Style="{StaticResource tbStandart2}"
-                >Еще не с нами?
-
-            </TextBlock>
+                >Войти</Button>  
         </StackPanel>
     </Grid>
 </Page>
